@@ -4,7 +4,7 @@
         :root {
             --bg-card: rgb(9 9 11);
             --text-main: #ffffff;
-            --text-muted: #e0e0e0;
+            --text-muted: #f4f4f4f4;
             --accent-color: #3bd4d8;
             --border-color: rgba(255, 255, 255, 0.15);
             --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
@@ -14,7 +14,7 @@
         body.light-mode {
             --bg-card: #ffffff;
             --text-main: #222222;
-            --text-muted: #555555;
+            --text-muted: #444444;
             --accent-color: #9e31e7; 
             --border-color: rgba(0, 0, 0, 0.15);
             background-color: #f4f4f4;

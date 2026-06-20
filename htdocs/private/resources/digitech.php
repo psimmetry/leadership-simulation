@@ -441,8 +441,10 @@
             document.head.innerHTML = '';
         }
 
+        const MAX_TRIES = 10;
+
         // Poll the link validity
-        async function pollValidity(tries=10) {
+        async function pollValidity(tries=MAX_TRIES) {
             const url = '<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>' + '&query=1';
             // console.log('polling', url)
 
@@ -453,7 +455,7 @@
                 if (response.status === 200) {
                     // still valid, keep on polling
                     // console.log('valid')
-                    setTimeout(async () => await pollValidity(tries), 3000);
+                    setTimeout(async () => await pollValidity(), 3000);
                 } 
                 else if (response.status === 403) {
                     // invalid - clear the page and refresh it
@@ -478,7 +480,7 @@
             }
         }
         // console.log('hello')
-        pollValidity(10);
+        pollValidity();
 
     </script>
 </body>
