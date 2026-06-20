@@ -1,4 +1,4 @@
-       /* ==========================================================================
+/* ==========================================================================
            1. GLOBALS & DESIGN SYSTEM VARIABLES
            ========================================================================== */
         :root {
@@ -26,7 +26,6 @@
 
         html {
             scroll-behavior: smooth;
-            /* Ensures clicking a nav link doesn't hide the header under the sticky navbar */
             scroll-padding-top: 6rem; 
             font-family: 'Montserrat', sans-serif;
             color: var(--text-main);
@@ -88,15 +87,15 @@
         h1 { font-size: 2.2rem; margin-bottom: 0.5rem; text-align: center; }
         h2 { font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1.5rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-color); color: var(--accent-color); transition: border-color 0.3s ease, color 0.3s ease; }
         h3 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 1rem; }
-        h4 { font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-color); }
+        h4 { font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-color); }
         
         p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.8rem; transition: color 0.3s ease; }
-        strong { color: var(--text-main); font-weight: 700; }
+        strong { color: var(--text-main); font-weight: 500; }
         
         ul, ol { margin-top: 1rem; margin-bottom: 2rem; padding-left: 1.5rem; color: var(--text-muted); font-size: 1.1rem; transition: color 0.3s ease; }
         li { margin-bottom: 1rem; line-height: 1.7; }
 
-        .container { width: 95%; max-width: 75rem; margin: 0 auto; }
+        .container { width: 95%; max-width: 73rem; margin: 0 auto; }
         .text-center { text-align: center; }
 
         /* --- NAVBAR --- */
@@ -153,8 +152,8 @@
             font-weight: 500;
             font-size: 1rem;
             letter-spacing: 0.5px;
-            padding-bottom: 0.2rem; /* Added for underline spacing */
-            border-bottom: 2px solid transparent; /* Added to keep height stable before hover */
+            padding-bottom: 0.2rem; 
+            border-bottom: 2px solid transparent; 
             transition: color 0.3s ease, border-color 0.3s ease;
         }
         .nav-links a:hover, .nav-links a.active {
@@ -222,7 +221,7 @@
         .org-node {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            padding: 1.5rem;
+            padding: 0.6rem;
             border-radius: 8px;
             color: var(--text-main);
             text-align: center;
@@ -237,10 +236,20 @@
         body.light-mode .org-node { box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .org-node.primary { border-color: var(--accent-color); color: var(--accent-color); }
         
+        .org-node-desc {
+            font-size: 1rem; 
+            font-weight: normal; 
+            color: var(--text-muted); 
+            margin-top: 0.8rem; 
+            line-height: 1.5;
+            text-align: left;
+            transition: color 0.3s ease;
+        }
+
         .org-node ul {
             text-align: left;
             font-weight: 400;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             margin-top: 1.2rem;
             margin-bottom: 0;
             padding-left: 1.5rem;
@@ -257,31 +266,57 @@
             transition: background-color 0.3s ease;
         }
         
+        /* 2-Branch Split (Section B) */
         .org-split {
             display: flex;
             justify-content: center;
             width: 100%;
             position: relative;
         }
-        
-        /* Horizontal Bridge for Desktop */
         .org-split::before {
             content: '';
             position: absolute;
             top: 0;
-            width: 50%; /* Spans exactly half the width between branch centers */
+            width: 50%; 
             height: 2px;
             background-color: var(--border-color);
             z-index: 1;
             transition: background-color 0.3s ease;
         }
-        
         .org-branch {
             display: flex;
             flex-direction: column;
             align-items: center;
             flex: 1;
-            padding: 0 2.5rem;
+            padding: 0 1.5rem;
+        }
+
+        /* 3-Branch Split (Section C) */
+        .org-split-3 {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+        }
+        .org-split-3::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 16.66%;
+            right: 16.66%;
+            height: 2px;
+            background-color: var(--border-color);
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+        .org-branch-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            padding: 0 1rem;
+            width: 33.33%;
+            box-sizing: border-box;
         }
         
         .org-collab {
@@ -318,7 +353,11 @@
         }
 
         th, td { padding: 1.2rem 1.4rem; border-bottom: 1px solid var(--border-color); text-align: left; line-height: 1.5; transition: border-color 0.3s ease; }
-        th { background: rgba(0, 229, 255, 0.05); color: var(--accent-color); font-weight: 600; text-transform: uppercase; font-size: 1rem; letter-spacing: 0.5px; transition: background 0.3s ease, color 0.3s ease; }
+        
+        /* Centers all columns except the first one (the names/labels column) */
+        th:not(:first-child), td:not(:first-child) { text-align: center; }
+        
+        th { background: rgba(0, 229, 255, 0.05); color: var(--accent-color); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; transition: background 0.3s ease, color 0.3s ease; }
         
         body.light-mode th {
             background: rgba(0, 119, 255, 0.05);
@@ -356,6 +395,17 @@
         }
 
         .highlight-block p { margin: 0; color: var(--text-main); }
+
+        /* --- FOOTER --- */
+        .site-footer {
+            text-align: center;
+            padding: 2rem 1rem 6rem;
+            margin: 0 auto;
+            max-width: 75%;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
 
         /* --- SCROLL TO TOP BUTTON --- */
         .scroll-top-btn {
@@ -413,12 +463,44 @@
             stroke-linecap: round;
             stroke-linejoin: round;
         }
+        
+        /* --- PRINT MEDIA QUERY FIX --- */
+        #print-warning {
+            display: none;
+        }
+        
+        @media print {
+            /* Set print background to white and text to black to save ink */
+            body, html {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+            /* Hide the actual UI elements completely */
+            nav, header, main, footer, button {
+                display: none !important;
+            }
+            /* Show the hidden warning div */
+            #print-warning {
+                display: block !important;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 2in;
+                color: #000000;
+            }
+
+            .site-footer {
+                display: block !important;
+            }
+        }
 
         @media (max-width: 992px) {
             .main-document { padding: 2.5rem; }
             h1 { font-size: 1.8rem; }
             .nav-right-controls { gap: 1.5rem; }
             .nav-links { gap: 1.5rem; }
+            .site-footer { max-width: 90%; }
         }
         @media (max-width: 768px) {
             .main-document { padding: 1.5rem; }
@@ -433,10 +515,12 @@
             .scroll-top-btn { bottom: 1.5rem; right: 1.5rem; width: 3rem; height: 3rem; }
             
             /* Responsive Organogram Stacking */
-            .org-split { flex-direction: column; }
-            .org-split::before { display: none; }
-            .org-branch { padding: 0; width: 100%; margin-bottom: 1.5rem; }
-            .org-branch + .org-branch::before {
+            .org-split, .org-split-3 { flex-direction: column; align-items: center; }
+            .org-split::before, .org-split-3::before { display: none; }
+            .org-branch, .org-branch-3 { padding: 0; width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
+            .org-branch .org-line-v, .org-branch-3 .org-line-v { height: 40px !important; }
+            
+            .org-branch + .org-branch::before, .org-branch-3 + .org-branch-3::before {
                 content: '';
                 display: block;
                 width: 2px;
@@ -445,4 +529,12 @@
                 margin: 0 auto;
                 transition: background-color 0.3s ease;
             }
+            
+            .org-collab { 
+                margin-top: 2rem; 
+                padding: 1rem; 
+                border: 1px dashed var(--border-color); 
+                border-radius: 8px; 
+            }
+            .org-collab::before, .org-collab::after { display: none; }
         }

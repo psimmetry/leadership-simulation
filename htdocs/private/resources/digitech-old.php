@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senior Executive Simulation: Digitech Leadership (Pty) Ltd</title>
-    <link rel="icon" type="image/jpeg" href="/assets/3.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/stylesheet.css">
 </head>
 <body class="light-mode" oncontextmenu="return false;" oncopy="return false;" oncut="return false;" onselectstart="return false;">
-
-    <div id="print-warning">
-        Security Alert: Printing is disabled for this document.
-    </div>
 
     <nav class="navbar">
         <div class="nav-container">
@@ -45,7 +40,7 @@
     </nav>
 
     <header class="hero-section text-center container">
-        <h1>Executive Simulation Briefing</h1>
+        <h1>Leadership Assessment Exercise</h1>
         <p class="hero-subtext">Digitech Leadership (Pty) Ltd · Western Cape Hub Turnaround Strategy</p>
     </header>
 
@@ -54,17 +49,17 @@
         <section id="section-a" class="main-document">
             <h2>Section A: Instructions to the Candidate</h2>
             
-            <h3>1. The Leadership assessment exercise</h3>
-            <p>Today is <?php echo date('j F Y'); ?>. You have been appointed as the  <strong>Regional Director: Western Cape</strong>, at <strong>Digitech Leadership (Pty) Ltd</strong>, a South African based digital infrastructure and AI-platform provider.</p>
-            <p>Your predecessor has been reassigned to the Head Office in Gauteng, leaving a strategic leadership vacancy. The Group Chief Executive Officer (CEO) and the Executive Committee (ExCo) requested an executive brief and a subsequent <strong>20-Minute Boardroom Presentation</strong>.</p>
-            <p>You have <strong>60 minutes</strong> to study the corporate and regional information, conduct a diagnostic across the functional boundaries, and present a turn-around strategy.</p>
+            <h3>1. The Leadership Assessment Exercise</h3>
+            <p>Today is <?php echo date('j F Y'); ?> You have been appointed as the Regional Director: Western Cape, at Digitech Leadership (Pty) Ltd, a South African based digital infrastructure and AI-platform provider.</p>
+            <p>Your predecessor has been reassigned to the Head Office in Gauteng, leaving a strategic leadership vacancy. The Group Chief Executive Officer (CEO) and the Executive Committee (ExCo) requested an executive brief and a subsequent 20-Minute Boardroom Presentation.</p>
+            <p>You have 60 minutes to study the corporate and regional information, conduct a diagnostic across the functional boundaries, and present a turn-around strategy.</p>
             
             <p>The information below includes a broad view of the corporate context. In addition, you are provided with business insights pertaining to the Western Cape region.</p>
 
             <p><strong>Your strategic plan should address the following three pillars:</strong></p>
             <ul>
                 <li><strong>Go-to-Market Strategy:</strong> Re-align the regional sales focus to drive high-margin revenue, capitalise on emerging market segments, and streamline misalignments between product potential and staff efficiencies.</li>
-                <li><strong>Financial Governance and Profitability:</strong> Gain efficiencies within the <strong>R50,000,000</strong> regional operational budget. Diagnose and neutralize overspending patterns, eliminate operational leakage, and develop a sustainable financial outlook.</li>
+                <li><strong>Financial Governance and Profitability:</strong> Gain efficiencies within the R5,000,000 regional operational budget. Diagnose and neutralize overspending patterns, eliminate operational leakage, and develop a sustainable financial outlook.</li>
                 <li><strong>Human Capital and Organizational Health:</strong> Address the high staff turnover (currently at 30%), bridge the competence gaps within the existing sales and advisory force, resolve structural role ambiguity, and neutralize potential cultural friction.</li>
             </ul>
 
@@ -79,8 +74,8 @@
             <h2>Section B: Digitech Corporate Landscape & Leadership Context</h2>
             
             <h3>1. Corporate Overview</h3>
-            <p>Founded in South Africa, <strong>Digitech Leadership (Pty) Ltd</strong> is recognized for developing digital corporate infrastructure platforms. Historically, its core revenue was based on operational enterprise application architecture. This includes operational database system provisions and optimisation, and advanced spreadsheet configurations.</p>
-            <p>Over the last 24 months, Digitech made a strategic shift in developing and providing cutting-edge <strong>Generative AI Architectural Tools</strong> and <strong>Integrated Enterprise Workflow Processes</strong>. While the legacy database infrastructure remains a steady market contributor, Digitech Leadership’s brand reputation is shifting to integrated AI-enhanced platforms.</p>
+            <p>Founded in South Africa, Digitech Leadership (Pty) Ltd is recognized for developing digital corporate infrastructure platforms. Historically, its core revenue was based on operational enterprise application architecture. This includes operational database system provisions and optimisation, and advanced spreadsheet configurations.</p>
+            <p>Over the last 24 months, Digitech made a strategic shift in developing and providing cutting-edge Generative AI Architectural Tools and Integrated Enterprise Workflow Processes. While the legacy database infrastructure remains a steady market contributor, Digitech Leadership’s brand reputation is shifting to integrated AI-enhanced platforms.</p>
 
             <h3>2. Products and Revenue Drivers</h3>
             <p>The firm operates across four primary digital infrastructure segments, supplemented by post-sales integration services, upskilling of organisational users and their internal technical support staff.</p>
@@ -124,7 +119,6 @@
                         <div class="org-line-v"></div>
                         <div class="org-node">
                             Regional Directors<br>
-                            <span style="font-size: 0.85em; font-weight: normal; color: var(--text-muted);">(e.g., Western Cape)</span>
                         </div>
                     </div>
                 </div>
@@ -140,63 +134,27 @@
             <p>Technical AI Solutions Engineers provide end-to-end architecture implementation, while Client Solution Specialists handle frontline queries, data capturing and customer maintenance services.</p>
             <p>A recent national audit has flagged several operational bottlenecks within Digitech Leadership (Pty) Ltd:</p>
             <ul>
-                <li><strong>Functional Duplication:</strong> A lack of resource optimisation has led to cost inefficiencies. Regional client services lines and the centralized Head Office responsibilities are vague and there seems to be limited clarity in terms of role clarity (“who does what”).</li>
-                <li><strong>Service Backlogs and Sub-contracting:</strong> Due to regional backlogs, technical client support is increasingly outsourced to expensive sub-contractors. This practice drives inappropriate expenditure, potentially draining capital from local product innovation.</li>
+                <li><strong>Functional Duplication:</strong> A lack of resource optimisation has led to cost inefficiencies. Regional client support lines and centralized Head Office operations are vague and there seems to be limited clarity in terms of role clarity (“who does what”).</li>
+                <li><strong>Service Backlogs and Sub-contracting:</strong> Technical client support is increasingly outsourced to expensive sub-contractors due to regional backlogs. This practice drives inappropriate expenditure, potentially draining capital from local product innovation.</li>
             </ul>
         </section>
 
         <section id="section-c" class="main-document">
-            <h2>Section C: Regional Performance – Western Cape – Business Insights</h2>
+            <h2>Section C: Regional Performance – Western Cape</h2>
 
             <h3>1. Regional Performance for Previous Year (<?php echo date('Y') - 1; ?>, Full Year (FY))</h3>
-            <p>The Western Cape region generated a total regional income of <strong>R52,000,000</strong> for the financial year ended December <?php echo date('Y') - 1; ?>. The income comprised of R47,160,000 from digital infrastructure provision and implementation, and R4,840,000 from post-sale optimization services and support.</p>
+            <p>The Western Cape region generated a total regional income of R5,200,000 for the financial year ended December <?php echo date('Y') - 1; ?>. The income comprised of R4,716,000 from digital infrastructure provision and implementation, and R484,000 from post-sale optimization services and support.</p>
             
             <p>The Western Cape region has the following organisational structure:</p>
-            
-            <div class="org-tree">
-                <div class="org-node primary" style="max-width: 550px;">
-                    Regional Director (you)
-                    <div class="org-node-desc" style="text-align: center;">
-                        Strategic direction | leadership and coordination | product sales and people management | vision, values, culture and organisational health | alignment with corporate strategy.
-                    </div>
-                </div>
-                <div class="org-line-v"></div>
-                
-                <div class="org-split-3">
-                    <div class="org-branch-3">
-                        <div class="org-line-v" style="height: 25px;"></div>
-                        <div class="org-node">
-                            Sales Executives
-                            <div class="org-node-desc">
-                                Responsible for client acquisition, providing enterprise solutions and close sales / conclude contracts / agreements.
-                            </div>
-                        </div>
-                    </div>
+            <ul>
+                <li><strong>Regional Director (you)</strong> - strategic direction | leadership and coordination | product sales and people management | vision, values, culture and organisational health | alignment with corporate strategy</li>
+                <li><strong>Sales Executives</strong> – responsible for client acquisition, providing enterprise solutions and close sales / conclude contracts / agreements</li>
+                <li><strong>Client Solution Specialist</strong> - this title includes general regional administrative staff like secretary and assistants. This cohort deals with customer post-sales, enquiries and office coordination.</li>
+                <li><strong>System and AI-Engineers (decentralised at regions)</strong> – involved in customised designs, advice to regionally based customers and sales executives regarding system dynamics and designs / operations / maintenance required</li>
+            </ul>
 
-                    <div class="org-branch-3">
-                        <div class="org-line-v" style="height: 25px;"></div>
-                        <div class="org-node">
-                            Client Solution Consultants
-                            <div class="org-node-desc">
-                                This title includes general regional administrative staff like secretary and assistants. This cohort deals with customer post-sales, enquiries and office coordination.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="org-branch-3">
-                        <div class="org-line-v" style="height: 25px;"></div>
-                        <div class="org-node">
-                            System and AI-Engineers
-                            <span style="display: block; font-size: 0.8em; font-weight: normal; margin-top: 0.2rem; color: var(--text-muted);">(Decentralised at regions)</span>
-                            <div class="org-node-desc">
-                                Involved in customised designs, advice to regionally based customers and sales executives regarding system dynamics and designs / operations / maintenance required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p>The most significant expense relates to remuneration. This includes commission, incentives and salaries for permanent staff. Sales Executives are paid a standard <strong>20% baseline commission</strong> on digital infrastructure contracts sold, with an <strong>additional 2% performance incentive</strong> when they exceed their overall annual sales volume target.</p>
-            <p>Sales Executives <?php echo date('Y') - 1; ?> performance is displayed in Table 1.</p>
+            <p>The most significant expense relates to remuneration. This includes commission, incentives and salaries for permanent staff represent. Sales Executives are paid a standard 20% baseline commission on digital infrastructure contracts sold, with an additional 2% performance incentive when they exceed their overall annual sales volume target.</p>
+            <p>Sales Executives <?php echo date('Y') - 1; ?> performance is displayed in table 1.</p>
 
             <div class="table-container">
                 <table>
@@ -206,7 +164,7 @@
                             <th>Sales Executive</th>
                             <th>Alpha (AI)</th>
                             <th>Beta (DB)</th>
-                            <th>Gamma (Spread sheets)</th>
+                            <th>Gamma (Sheets)</th>
                             <th>Delta (Legacy)</th>
                             <th>Total Units Sold</th>
                             <th>Annual Target</th>
@@ -214,26 +172,62 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Thabo M.</td><td>15</td><td>36</td><td>36</td><td>24</td><td>111</td><td>110</td><td>R1,614,000</td></tr>
-                        <tr><td>Sarah R.</td><td>10</td><td>45</td><td>20</td><td>5</td><td>80</td><td>100</td><td>R1,030,000</td></tr>
-                        <tr><td>Deon B.</td><td>24</td><td>5</td><td>5</td><td>10</td><td>44</td><td>75</td><td>R1,015,000</td></tr>
-                        <tr><td>Zola G.</td><td>15</td><td>15</td><td>12</td><td>20</td><td>62</td><td>70</td><td>R1,108,000</td></tr>
-                        <tr><td>Niel R.</td><td>27</td><td>35</td><td>25</td><td>21</td><td>108</td><td>130</td><td>R1,805,000</td></tr>
-                        <tr><td>Elena S.</td><td>9</td><td>25</td><td>15</td><td>8</td><td>57</td><td>70</td><td>R815,000</td></tr>
-                        <tr><td>Patricia N.</td><td>15</td><td>16</td><td>14</td><td>10</td><td>55</td><td>70</td><td>R936,000</td></tr>
-                        <tr><td>Sipho M.</td><td>12</td><td>18</td><td>21</td><td>19</td><td>70</td><td>80</td><td>R1,109,000</td></tr>
-                        <tr class="highlight-row"><td>TOTAL SALES</td><td>127</td><td>195</td><td>148</td><td>117</td><td>587</td><td>705</td><td>R9,432,000</td></tr>
-                        <tr class="highlight-row"><td>WESTERN CAPE SALES TARGETS</td><td>130</td><td>250</td><td>200</td><td>125</td><td></td><td></td><td>R10,700,000</td></tr>
+                        <tr><td>Thabo M.</td><td>15</td><td>36</td><td>36</td><td>24</td><td>111</td><td>110</td><td>R161,400</td></tr>
+                        <tr><td>Sarah R.</td><td>10</td><td>45</td><td>20</td><td>5</td><td>80</td><td>100</td><td>R103,000</td></tr>
+                        <tr><td>Deon B.</td><td>24</td><td>5</td><td>5</td><td>10</td><td>44</td><td>75</td><td>R101,500</td></tr>
+                        <tr><td>Zola G.</td><td>15</td><td>15</td><td>12</td><td>20</td><td>62</td><td>70</td><td>R110,800</td></tr>
+                        <tr><td>Niel R.</td><td>27</td><td>35</td><td>25</td><td>21</td><td>108</td><td>130</td><td>R180,500</td></tr>
+                        <tr><td>Elena S.</td><td>9</td><td>25</td><td>15</td><td>8</td><td>57</td><td>70</td><td>R81,500</td></tr>
+                        <tr><td>Patricia N.</td><td>15</td><td>16</td><td>14</td><td>10</td><td>55</td><td>70</td><td>R93,600</td></tr>
+                        <tr><td>Sipho M.</td><td>12</td><td>18</td><td>21</td><td>19</td><td>70</td><td>80</td><td>R110,900</td></tr>
+                        <tr class="highlight-row"><td>TOTAL SALES</td><td>127</td><td>195</td><td>148</td><td>117</td><td>587</td><td>705</td><td>R943,200</td></tr>
+                        <tr class="highlight-row"><td>WESTERN CAPE SALES TARGETS</td><td>130</td><td>250</td><td>200</td><td>125</td><td></td><td></td><td>R1,070,000</td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <h3>2. Talent Dynamics & Regional Staff Competence Audit</h3>
+            <h3>2. Western Cape Budget Report</h3>
+            <p>The Regional Director has full autonomy over the local budget, subject to ExCo approval, and is directly accountable for regional profit margins.</p>
+
+            <div class="table-container">
+                <table>
+                    <caption>Table 2: Budget Analysis - Western Cape Region</caption>
+                    <thead>
+                        <tr>
+                            <th>Budgetary Item</th>
+                            <th>FY<?php echo date('Y') - 2; ?> Approved Budget</th>
+                            <th>FY<?php echo date('Y') - 2; ?> Actual Spend</th>
+                            <th>FY<?php echo date('Y') - 1; ?> Approved Budget</th>
+                            <th>FY<?php echo date('Y') - 1; ?> Actual Spend</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Commission & Volume Incentives</td><td>R950,000</td><td>R960,000</td><td>R1,040,000</td><td>R1,180,000</td></tr>
+                        <tr><td>Salaries & Core Employee Benefits</td><td>R700,000</td><td>R630,000</td><td>R995,000</td><td>R993,000</td></tr>
+                        <tr><td>Training & Technical Upskilling</td><td>R90,000</td><td>R96,000</td><td>R80,000</td><td>R150,000</td></tr>
+                        <tr><td>Travel & Logistics</td><td>R120,000</td><td>R80,000</td><td>R150,000</td><td>R110,000</td></tr>
+                        <tr><td>Regional Marketing & Brand Campaigns</td><td>R65,000</td><td>R85,000</td><td>R75,000</td><td>R95,000</td></tr>
+                        <tr><td>Commercial Rent (Regional Office)</td><td>R85,000</td><td>R84,000</td><td>R89,000</td><td>R92,000</td></tr>
+                        <tr><td>Telecommunications & Data Pipelines</td><td>R25,000</td><td>R27,000</td><td>R55,000</td><td>R45,000</td></tr>
+                        <tr><td>Power & Infrastructure Utilities</td><td>R35,000</td><td>R32,000</td><td>R45,000</td><td>R43,000</td></tr>
+                        <tr><td>Office Fixtures & Spatial Upgrades</td><td>R95,000</td><td>R90,000</td><td>R120,000</td><td>R110,000</td></tr>
+                        <tr><td>Hardware & Dedicated Tech Equipment</td><td>R155,000</td><td>R145,000</td><td>R185,000</td><td>R165,000</td></tr>
+                        <tr><td>Consumables & Administrative Material</td><td>R94,000</td><td>R96,000</td><td>R120,000</td><td>R155,000</td></tr>
+                        <tr class="highlight-row"><td>TOTAL OPERATIONAL EXPENDITURE</td><td>R2,414,000</td><td>R2,325,000</td><td>R2,954,000</td><td>R3,138,000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight-block">
+                <p><strong>Note:</strong> For the upcoming financial cycle (FY<?php echo date('Y'); ?>), ExCo has allocated the Western Cape region’s total expense budget at <strong>R5,000,000</strong>. The budget provided is in the strategic context of potential opportunities in market penetration and the improvement of cost-efficiencies. Your plan must strategically optimise this resource to maximize profitability.</p>
+            </div>
+
+            <h3>3. Talent Dynamics & Regional Staff Competence Audit</h3>
             <p>A confidential, formal climate survey by the Human Capital (HR) department during <?php echo date('Y') - 1; ?> revealed the competence and capability levels of staff:</p>
             <ul>
-                <li><strong>Voluntary Attrition:</strong> The turnover for AI Solutions Engineers with less than 24 months of service is <strong>25%</strong>. Exit interviews cite stagnation in the corporate employee remuneration and benefit structures and recruitment by global tech firms operating in the Western Cape.</li>
-                <li><strong>Role Disconnection:</strong> Friction exists between AI Solutions Engineers and Client Solutions Consultants. Client Solution staff feel structurally underutilized and isolated, acting primarily as data-capture and client-facing administrators rather than collaborative partners.</li>
-                <li><strong>Cultural Friction:</strong> The workforce is culturally diverse; team cohesion is questionable. Operational silos have formed, and interpersonal relationships between the different cohorts are not optimal for a supportive work climate.</li>
+                <li><strong>Voluntary Attrition:</strong> The turnover for AI Solutions Engineers with less than 24 months of service is 25%. Exit interviews cite stagnation in the corporate employee remuneration and benefit structures and recruitment by global tech firms operating in the Western Cape.</li>
+                <li><strong>Role Disconnection:</strong> Friction exists between AI Solutions Engineers and Client Solutions Consultants. Client Solutions staff feel structurally underutilized and isolated, acting primarily as data-capture and client-facing administrators rather than collaborative partners.</li>
+                <li><strong>Cultural Friction:</strong> The workforce is culturally diverse; team cohesion is questionable. Operational silos have formed, and interpersonal relationships between different groups are not optimal for a supportive work climate.</li>
                 <li><strong>Head Office Escalation:</strong> Regional employees expressed challenges as to when and how complex issues and enquiries should be escalated to Head Office. Role uncertainty influences productivity and work priorities.</li>
             </ul>
 
@@ -257,12 +251,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Technical and AI Product Insight</td><td>2</td><td>1</td><td>2</td><td>2</td><td>3</td><td>1</td><td>1</td><td>2</td></tr>
+                        <tr><td>Technical AI Product Insight</td><td>2</td><td>1</td><td>2</td><td>2</td><td>3</td><td>1</td><td>1</td><td>2</td></tr>
                         <tr><td>Commercial Entrepreneurship</td><td>3</td><td>1</td><td>2</td><td>2</td><td>3</td><td>2</td><td>2</td><td>2</td></tr>
-                        <tr><td>Work Standards</td><td>3</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>2</td><td>2</td></tr>
-                        <tr><td>Proactive Initiative / Sales Innovation</td><td>3</td><td>2</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td></tr>
-                        <tr><td>Assertiveness</td><td>3</td><td>2</td><td>1</td><td>1</td><td>2</td><td>1</td><td>2</td><td>1</td></tr>
-                        <tr><td>Adaptability and Resilience</td><td>4</td><td>3</td><td>2</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr>
+                        <tr><td>Achievement Work Standards</td><td>3</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>2</td><td>2</td></tr>
+                        <tr><td>Proactive Initiative</td><td>3</td><td>2</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td></tr>
+                        <tr><td>Executive Assertiveness</td><td>3</td><td>2</td><td>1</td><td>1</td><td>2</td><td>1</td><td>2</td><td>1</td></tr>
+                        <tr><td>Strategic Adaptability</td><td>4</td><td>3</td><td>2</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr>
                         <tr><td>Client-Centricity Focus</td><td>4</td><td>4</td><td>1</td><td>3</td><td>3</td><td>3</td><td>4</td><td>2</td></tr>
                         <tr><td>Relationship Management</td><td>4</td><td>4</td><td>3</td><td>3</td><td>4</td><td>3</td><td>4</td><td>2</td></tr>
                         <tr><td>Complex Problem-Solving</td><td>2</td><td>2</td><td>2</td><td>2</td><td>4</td><td>2</td><td>1</td><td>2</td></tr>
@@ -270,44 +264,6 @@
                         <tr><td>Tenure / Years of Experience</td><td>14</td><td>3</td><td>7</td><td>2</td><td>10</td><td>1</td><td>1</td><td>1</td></tr>
                     </tbody>
                 </table>
-            </div>
-
-            <h3>3. Western Cape Budget Report</h3>
-            <p>The Regional Director has full autonomy over the local budget, subject to ExCo approval, and is directly accountable for regional profit margins.</p>
-
-            <div class="table-container">
-                <table>
-                    <caption>Table 2: Budget Analysis - Western Cape Region</caption>
-                    <thead>
-                        <tr>
-                            <th>Budgetary Item</th>
-                            <th>FY<?php echo date('Y') - 2; ?> Approved Budget</th>
-                            <th>FY<?php echo date('Y') - 2; ?> Actual Spend</th>
-                            <th>FY<?php echo date('Y') - 1; ?> Approved Budget</th>
-                            <th>FY<?php echo date('Y') - 1; ?> Actual Spend</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Commission & Volume Incentives</td><td>R9,500,000</td><td>R9,600,000</td><td>R10,400,000</td><td>R11,800,000</td></tr>
-                        <tr><td>Salaries & Core Employee Benefits</td><td>R7,000,000</td><td>R6,300,000</td><td>R9,950,000</td><td>R9,930,000</td></tr>
-                        <tr><td>Training & Technical Upskilling</td><td>R900,000</td><td>R960,000</td><td>R800,000</td><td>R1,500,000</td></tr>
-                        <tr><td>Travel & Logistics</td><td>R1,200,000</td><td>R800,000</td><td>R1,500,000</td><td>R1,100,000</td></tr>
-                        <tr><td>Regional Marketing & Brand Campaigns</td><td>R650,000</td><td>R850,000</td><td>R750,000</td><td>R950,000</td></tr>
-                        <tr><td>Commercial Rent (Regional Office)</td><td>R850,000</td><td>R840,000</td><td>R890,000</td><td>R920,000</td></tr>
-                        <tr><td>Telecommunications & Data Pipelines</td><td>R250,000</td><td>R270,000</td><td>R550,000</td><td>R450,000</td></tr>
-                        <tr><td>Power & Infrastructure Utilities</td><td>R350,000</td><td>R320,000</td><td>R450,000</td><td>R430,000</td></tr>
-                        <tr><td>Office Fixtures & Spatial Upgrades</td><td>R950,000</td><td>R900,000</td><td>R1,200,000</td><td>R1,100,000</td></tr>
-                        <tr><td>Hardware & Dedicated Technical Equipment</td><td>R1,550,000</td><td>R1,450,000</td><td>R1,850,000</td><td>R1,650,000</td></tr>
-                        <tr><td>Consumables & Administrative Material</td><td>R940,000</td><td>R960,000</td><td>R1,200,000</td><td>R1,550,000</td></tr>
-                        <tr class="highlight-row"><td>TOTAL OPERATIONAL EXPENDITURE</td><td>R24,140,000</td><td>R23,250,000</td><td>R29,540,000</td><td>R31,380,000</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="highlight-block">
-                <p style="margin-bottom: 1rem;"><strong>Note:</strong> For the upcoming financial cycle (FY<?php echo date('Y'); ?>), ExCo has allocated the Western Cape region’s total expense budget at <strong>R50,000,000</strong>.</p>
-                <p style="margin-bottom: 1rem;">The budget provided is in the strategic context of potential opportunities in market penetration and the improvement of cost-efficiencies.</p>
-                <p>Your plan must strategically optimise this resource to maximize profitability.</p>
             </div>
 
             <h3>4. Client Feedback and Retention Survey</h3>
@@ -325,25 +281,21 @@
             Leaders should synthesize the macro trends into their local regional strategy:</p>
             
             <h4>Trend 1 - AI Market Ingestion</h4>
-            <p>The Trends Report for South Africa indicates that 84% of local executives rank "Work Reimagined through Generative AI" as critical to corporate success. The report mentions a 31% readiness for execution on workforce and process implementation. This finding represents an opportunity that Digitech's products and services can bridge.</p>
+            <p>The Trends Report for South Africa indicates that 84% of local executives rank "Work Reimagined through Generative AI" as critical to corporate success. The report mentions a 31% readiness for execution on workforce and process implementation. This finding represents a capability gap that Digitech's products and services can bridge.</p>
 
             <h4>Trend 2 - Casting Opportunities</h4>
-            <p>A major international film studio has confirmed that large-scale film activities will begin during <?php echo date('Y'); ?> in South Africa. The production requires advanced logistical simulation software, crowd-flow visualization tools, and automated workflow solutions. Specific reference was made to activities in the Western Cape region.</p>
+            <p>A major international film studio has confirmed that mega-budget action film activities will begin during <?php echo date('Y'); ?> in South Africa. The production requires advanced logistical simulation software, crowd-flow visualization tools, and automated workflow solutions. Specific reference was made to activities in the Western Cape region.</p>
 
             <h4>Trend 3 - Infrastructure Opportunities</h4>
             <p>The construction market segment is expanding in all regions, for example the building of private university campuses and commercial airports. This trend was specifically noticed in the Western Cape. The developers are considering enterprise technology partners to build their integrated operational database and digital architecture.</p>
 
-            <h4>Trend 4 – Human Capital Training and Development</h4>
+            <h4>Trend 4 - Human Capital Training and Development</h4>
             <p>Digitech Leadership (corporate) has launched training in diversity management, cross-functional role synthesis, and interpersonal relationship restructuring. Programs are available for the respective units and includes work related skills training and customer awareness.</p>
 
             <p style="text-align: center; margin-top: 3rem; margin-bottom: -1rem; color: var(--text-muted);"><em>End of Digitech Leadership Exercise</em></p>
         </section>
 
     </main>
-
-    <footer class="site-footer">
-        &copy; Psimmetry. All Rights Reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means.
-    </footer>
 
     <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" title="Go to top">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -433,53 +385,6 @@
         
         // Trigger scroll event on load to highlight the first section initially
         window.dispatchEvent(new Event('scroll'));
-
-        function clearPage(reason) {
-            document.body.innerHTML = reason;    
-            document.body.removeAttribute('style');
-            document.body.className = ''; // Clears any CSS framework classes (like Bootstrap or Tailwind)
-            document.head.innerHTML = '';
-        }
-
-        // Poll the link validity
-        async function pollValidity(tries=10) {
-            const url = '<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>' + '&query=1';
-            // console.log('polling', url)
-
-            try {
-                const response = await fetch(url);
-
-                // Check the status code directly
-                if (response.status === 200) {
-                    // still valid, keep on polling
-                    // console.log('valid')
-                    setTimeout(async () => await pollValidity(tries), 3000);
-                } 
-                else if (response.status === 403) {
-                    // invalid - clear the page and refresh it
-                    // console.log('invalid')
-                    clearPage('Link expired.');
-                    window.location.reload();
-                } 
-                else {
-                    console.warn(`Received unexpected status code: ${response.status}`);
-                    setTimeout(async () => await pollValidity(tries-1), 3000);
-                }
-                
-            } catch (error) {
-                // network error, try again, but fewer times
-                if(tries === 0) {
-                    // console.log('ran out of tries')
-                    clearPage('An internet connection is required to keep the page content alive. Once internet is restored, refresh the page.')
-                } else {
-                    // console.log('trying again')
-                    setTimeout(async () => await pollValidity(tries-1), 1000);
-                }
-            }
-        }
-        // console.log('hello')
-        pollValidity(10);
-
     </script>
 </body>
 </html>
