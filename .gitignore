@@ -40,4 +40,4 @@ composer.lock
 .secrets/
 
 psical_pwd.txt
-config.php
+htdocs/private/src/config.php

@@ -8,9 +8,9 @@
 
 // Your encryption key MUST be exactly 32 bytes (256 bits) for AES-256
 // Generate a real one using base64_encode(openssl_random_pseudo_bytes(32))
-$PATH = '/home/psicalc1/linkgen/src';
-require_once $PATH  . "/links.php";
-require_once $PATH  . "/config.php";
+$PATH = __DIR__ . '/../../private';
+require_once $PATH  . "/src/links.php";
+require_once $PATH  . "/src/config.php";
 
 $resource = NULL;
 $links = [];
@@ -33,9 +33,12 @@ if (isset($_GET['startTime'])) {
     $startTime = $_GET['startTime'];
 }
 
+$timeZone = new DateTimeZone('Africa/Johannesburg');
+
 $DATE_FORMAT = 'H:i:s (d M Y)';
 
 $tempDate = new DateTime();
+$tempDate->setTimezone($timeZone);
 
 $tempDate->setTimestamp($startTime);
 $currStartTimeStr = $tempDate->format($DATE_FORMAT );
@@ -65,6 +68,7 @@ for ($i = 0; $i < 48; $i++) {
 
 // 1. Get the current time
 $date = new DateTime();
+$date->setTimezone($timeZone);
 
 // 2. Get the current minute and second
 $minutes = (int)$date->format('i');

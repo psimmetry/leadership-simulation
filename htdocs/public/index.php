@@ -2,7 +2,7 @@
 
 use function PHPSTORM_META\type;
 
-$PATH = '/home/psicalc1/linkgen';
+$PATH = __DIR__ . '/../private';
 $RESOURCE_PATH = $PATH . '/resources';
 
 require_once $PATH  . "/src/links.php";

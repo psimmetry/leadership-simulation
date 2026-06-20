@@ -1,17 +1,22 @@
-version: '3.8'
-
+version: '3'
 services:
-  web:
-    image: php:8.2-apache
-    container_name: psical-dev
+  # The PHP-FPM Service
+  php:
+    image: docker.io/library/php:8.5-fpm
+    container_name: clp-php
+    volumes:
+      - ./htdocs:/home/clp-user/htdocs:z
+    restart: always
+
+  # The Nginx Service
+  nginx:
+    image: docker.io/library/nginx:alpine
+    container_name: clp-nginx
     ports:
       - "8080:80"
     volumes:
-      - ./public_html:/var/www/html:z
-      - ./linkgen:/home/psicalc1/linkgen:z
-      - ./php.ini.local:/usr/local/etc/php/php.ini:ro
-      - ./config-files/etc/apache2/.htpasswd:/etc/apache2/.htpasswd:z
-    environment:
-      - APACHE_DOCUMENT_ROOT=/var/www/html
-
-volumes: {}
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:z
+      - ./htdocs:/home/clp-user/htdocs:z
+    depends_on:
+      - php
+    restart: always
