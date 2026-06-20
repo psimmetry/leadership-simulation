@@ -100,8 +100,6 @@ for ($i = 0; $i < $N_START_TIMES; $i++) {
     $date->add($interval);
 }
 
-
-
 function toLink(string $link)
 {
     return Config::$URL . '/' . $link;
