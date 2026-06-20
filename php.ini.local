@@ -1,0 +1,40 @@
+[PHP]
+engine = On
+short_open_tag = Off
+precision = 14
+memory_limit = 256M
+display_errors = On
+log_errors = Off
+error_reporting = E_ALL
+include_path = .:/usr/share/php
+file_uploads = On
+upload_max_filesize = 10M
+post_max_size = 15M
+max_execution_time = 600
+max_input_time = 300
+default_socket_timeout = 600
+
+; Date/Time Settings
+date.timezone = UTC
+
+[Error Handling]
+log_errors = On
+error_log = /var/log/php/error.log
+display_errors = Off
+display_startup_errors = Off
+log_errors_max_len = 1024
+ignore_repeated_errors = Off
+ignore_repeated_source = Off
+report_memleaks = On
+report_zend_debug = 0
+html_errors = Off
+exception_handler = throw
+variables_order = "EGPCS"
+always_populate_auto_global_on_error = Off
+stderr_verbosity = error
+
+[Xdebug]
+xdebug.mode = debug,coverage
+xdebug.client_host = host.docker.internal
+xdebug.client_port = 9003
+xdebug.start_with_request = yes

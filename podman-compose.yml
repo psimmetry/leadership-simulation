@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    image: php:8.2-apache
+    container_name: psical-dev
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public_html:/var/www/html:z
+      - ./linkgen:/home/psicalc1/linkgen:z
+      - ./php.ini.local:/usr/local/etc/php/php.ini:ro
+      - ./config-files/etc/apache2/.htpasswd:/etc/apache2/.htpasswd:z
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+
+volumes: {}

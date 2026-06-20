@@ -1,0 +1,43 @@
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Podman
+*.podman
+.podman/
+podman-machine-default
+podman_machine
+
+# Logs
+*.log
+logs/
+
+# Cache
+.phpunit.result.cache
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Composer
+/vendor/
+composer.lock
+
+# Build artifacts
+/dist/
+/build/
+
+# Secrets
+.secrets/
+
+psical_pwd.txt
+config.php
