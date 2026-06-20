@@ -7,6 +7,8 @@ services:
     volumes:
       - ./htdocs:/home/clp-user/htdocs:z
     restart: always
+    environment:
+      DEVELOP: 1
 
   # The Nginx Service
   nginx:
