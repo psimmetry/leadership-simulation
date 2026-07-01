@@ -57,9 +57,12 @@ function verifyLink()
                     "status" => "valid"
                 ];
             } else {
+                $timeZone = new DateTimeZone('Africa/Johannesburg');
                 $start = new DateTime( );
+                $start->setTimezone($timeZone);
                 $start->setTimestamp($startTime);
                 $end = new DateTime();
+                $end->setTimezone($timeZone);
                 $end->setTimestamp($exp);
                 return [
                     "resource" => NULL,
