@@ -39,7 +39,8 @@ function verifyLink()
         $plaintext = FieldEncryptor::decrypt($encr, Config::$LINK_ENCRYPT_KEY);
         if (!isset($plaintext)) return [
                     "resource" => NULL,
-                    "status" => "invalid link"
+                    "status" => "not a valid request - check for typos in the link",
+                    "time" => 0
                 ];;
         // $plaintext = substr($plaintext, 1);
         // return $plaintext;
@@ -54,7 +55,8 @@ function verifyLink()
             if ($now < $exp && $now > $startTime) {
                 return [
                     "resource" => $resource,
-                    "status" => "valid"
+                    "status" => "valid",
+                    "time" => 0
                 ];
             } else {
                 $timeZone = new DateTimeZone('Africa/Johannesburg');
@@ -66,19 +68,22 @@ function verifyLink()
                 $end->setTimestamp($exp);
                 return [
                     "resource" => NULL,
-                    "status" => "only valid from " . $start->format($DATE_FORMAT ) . " until " . $end->format($DATE_FORMAT )
+                    "status" => "link only valid from " . $start->format( $DATE_FORMAT ) . " until " . $end->format( $DATE_FORMAT ) . ". Page will automatically refresh. Refresh page manually if automatic refresh does not work",
+                    "time" => $start->getTimestamp()
                 ];
             }
         } else {
             return [
                 "resource" => NULL,
-                "status" => "invalid link"
+                "status" => "not a valid request - check for typos in the link",
+                "time" => 0
             ];
         }
     } else {
         return [
             "resource" => NULL,
-            "status" => "no query provided"
+            "status" => "no query provided - encrypted link string needed",
+            "time" => 0
         ];
     }
 }

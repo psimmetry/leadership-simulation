@@ -23,7 +23,8 @@ if(!isset($verify['resource'])) {
         // echo type($verify);
         // echo implode(", ", $verify);
         // echo implode(", ", array_keys($verify));
-        $contents = str_replace('{placeholder}', $verify["status"], $contents);
+        $contents = str_replace('{{status}}', $verify["status"], $contents);
+        $contents = str_replace('{{time}}', $verify["time"], $contents);
         echo $contents;
     }
 } else {

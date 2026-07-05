@@ -88,6 +88,25 @@
 </head>
 <body>
     <h1>Invalid link</h1>
-    <p>Reason: {placeholder}.</p>
+    <p>Reason: {{status}}.</p>
+
+
+    <script>
+        const targetTimestamp = {{time}}; 
+        const targetTimeMs = targetTimestamp * 1000;
+        const delay = targetTimeMs - Date.now();
+        if(targetTimestamp !== 0) {
+            console.log('Refreshing page in', delay, 'ms')
+            const refresh = () => setTimeout(() => {window.location.reload()}, 1000)
+            if(delay > 0) {
+                setTimeout(() => {
+                    refresh();
+                }, delay);
+            } else {
+                refresh()
+            }
+        }
+    </script>
+
 </body>
 </html>
