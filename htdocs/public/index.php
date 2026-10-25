@@ -32,6 +32,7 @@ if(!isset($verify['resource'])) {
         http_response_code(200);
         echo 'ok';
     } else {
+        $fallback_delta_time = $verify['expireTime'] - time();
         include $RESOURCE_PATH . '/' . $verify['resource'];
     }
 }

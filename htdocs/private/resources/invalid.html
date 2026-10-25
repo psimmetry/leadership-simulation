@@ -95,7 +95,7 @@
         const targetTimestamp = {{time}}; 
         const targetTimeMs = targetTimestamp * 1000;
         const delay = targetTimeMs - Date.now();
-        if(targetTimestamp !== 0) {
+        if(targetTimestamp !== 0 && delay > 0) {
             console.log('Refreshing page in', delay, 'ms')
             const refresh = () => setTimeout(() => {window.location.reload()}, 1000)
             if(delay > 0) {

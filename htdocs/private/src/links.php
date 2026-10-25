@@ -40,7 +40,9 @@ function verifyLink()
         if (!isset($plaintext)) return [
                     "resource" => NULL,
                     "status" => "not a valid request - check for typos in the link",
-                    "time" => 0
+                    "time" => 0,
+                    "startTime" => 0,
+                    "expireTime" => 0
                 ];;
         // $plaintext = substr($plaintext, 1);
         // return $plaintext;
@@ -56,7 +58,9 @@ function verifyLink()
                 return [
                     "resource" => $resource,
                     "status" => "valid",
-                    "time" => 0
+                    "time" => 0,
+                    "startTime" => $startTime,
+                    "expireTime" => $exp
                 ];
             } else {
                 $timeZone = new DateTimeZone('Africa/Johannesburg');
@@ -66,24 +70,32 @@ function verifyLink()
                 $end = new DateTime();
                 $end->setTimezone($timeZone);
                 $end->setTimestamp($exp);
+                $status = "link only valid from " . $start->format( $DATE_FORMAT ) . " until " . $end->format( $DATE_FORMAT ) . ". Page will automatically refresh. Refresh page manually if automatic refresh does not work";
+                if($now > $exp) $status = "link only valid from " . $start->format( $DATE_FORMAT ) . " until " . $end->format( $DATE_FORMAT ) . ". Please obtain a new link, since this one has expired";
                 return [
                     "resource" => NULL,
-                    "status" => "link only valid from " . $start->format( $DATE_FORMAT ) . " until " . $end->format( $DATE_FORMAT ) . ". Page will automatically refresh. Refresh page manually if automatic refresh does not work",
-                    "time" => $start->getTimestamp()
+                    "status" => $status,
+                    "time" => $start->getTimestamp(),
+                    "startTime" => 0,
+                    "expireTime" => 0
                 ];
             }
         } else {
             return [
                 "resource" => NULL,
                 "status" => "not a valid request - check for typos in the link",
-                "time" => 0
+                "time" => 0,
+                "startTime" => 0,
+                "expireTime" => 0
             ];
         }
     } else {
         return [
             "resource" => NULL,
             "status" => "no query provided - encrypted link string needed",
-            "time" => 0
+            "time" => 0,
+            "startTime" => 0,
+            "expireTime" => 0
         ];
     }
 }

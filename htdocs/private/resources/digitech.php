@@ -445,17 +445,19 @@
 
         // Poll the link validity
         async function pollValidity(tries=MAX_TRIES) {
-            const url = '<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>' + '&query=1';
+            const url =  '<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>' + '&query=1';
             // console.log('polling', url)
 
             try {
                 const response = await fetch(url);
 
+                // throw Error('nope')
+
                 // Check the status code directly
                 if (response.status === 200) {
                     // still valid, keep on polling
                     // console.log('valid')
-                    setTimeout(async () => await pollValidity(), 3000);
+                    setTimeout(async () => await pollValidity(), 10000);
                 } 
                 else if (response.status === 403) {
                     // invalid - clear the page and refresh it
@@ -465,17 +467,20 @@
                 } 
                 else {
                     console.warn(`Received unexpected status code: ${response.status}`);
-                    setTimeout(async () => await pollValidity(tries-1), 3000);
+                    setTimeout(async () => await pollValidity(tries-1), 10000);
                 }
                 
             } catch (error) {
                 // network error, try again, but fewer times
-                if(tries === 0) {
-                    // console.log('ran out of tries')
-                    clearPage('An internet connection is required to keep the page content alive. Once internet is restored, refresh the page.')
+                if(tries <= 0) {
+                    // console.log('Ran out of validity check tries, using fallback expiry time <?php echo $fallback_delta_time ?? 60  ?>')
+                    setTimeout(() => {
+                        clearPage('This page has been automatically cleared - the link has likely expired. Refresh the page if this is incorrect.')
+                    },  1000 * <?php echo $fallback_delta_time ?? 60  ?>) // wipe yourself after fallback expiry time
+                    
                 } else {
                     // console.log('trying again')
-                    setTimeout(async () => await pollValidity(tries-1), 1000);
+                    setTimeout(async () => await pollValidity(tries-1), 5000);
                 }
             }
         }
