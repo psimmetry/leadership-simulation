@@ -450,6 +450,15 @@
             const url =  '<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>' + '&query=1';
             // console.log('polling', url)
 
+            let estTimeLeft = 1000*<?php echo $fallback_delta_time ?? 60  ?> - (Date.now() - loadedTime);
+            if(estTimeLeft < 100) estTimeLeft = 100;
+
+            if(tries <= 0) {
+                setTimeout(() => {
+                    clearPage('The link has likely expired. Refresh the page if this is incorrect.')
+                },  estTimeLeft) // wipe yourself after fallback expiry time                
+            }
+
             try {
                 const response = await fetch(url);
 
@@ -475,13 +484,9 @@
             } catch (error) {
                 // network error, try again, but fewer times
                 if(tries <= 0) {
-                    let estTimeLeft = 1000*<?php echo $fallback_delta_time ?? 60  ?> - (Date.now() - loadedTime);
-                    // console.log('Ran out of validity check tries, using fallback expiry time ' + estTimeLeft)
-                    if(estTimeLeft < 100) estTimeLeft = 100;
                     setTimeout(() => {
                         clearPage('The link has likely expired. Refresh the page if this is incorrect.')
-                    },  estTimeLeft) // wipe yourself after fallback expiry time
-                    
+                    },  estTimeLeft) // wipe yourself after fallback expiry time                    
                 } else {
                     // console.log('trying again')
                     setTimeout(async () => await pollValidity(tries-1), 10000);
