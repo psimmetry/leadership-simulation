@@ -443,6 +443,8 @@
 
         const MAX_TRIES = 10;
 
+        const loadedTime = Date.now();
+
         // Poll the link validity
         async function pollValidity(tries=MAX_TRIES) {
             const url =  '<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>' + '&query=1';
@@ -473,14 +475,16 @@
             } catch (error) {
                 // network error, try again, but fewer times
                 if(tries <= 0) {
-                    // console.log('Ran out of validity check tries, using fallback expiry time <?php echo $fallback_delta_time ?? 60  ?>')
+                    let estTimeLeft = 1000*<?php echo $fallback_delta_time ?? 60  ?> - (Date.now() - loadedTime);
+                    // console.log('Ran out of validity check tries, using fallback expiry time ' + estTimeLeft)
+                    if(estTimeLeft < 100) estTimeLeft = 100;
                     setTimeout(() => {
-                        clearPage('This page has been automatically cleared - the link has likely expired. Refresh the page if this is incorrect.')
-                    },  1000 * <?php echo $fallback_delta_time ?? 60  ?>) // wipe yourself after fallback expiry time
+                        clearPage('The link has likely expired. Refresh the page if this is incorrect.')
+                    },  estTimeLeft) // wipe yourself after fallback expiry time
                     
                 } else {
                     // console.log('trying again')
-                    setTimeout(async () => await pollValidity(tries-1), 5000);
+                    setTimeout(async () => await pollValidity(tries-1), 10000);
                 }
             }
         }
